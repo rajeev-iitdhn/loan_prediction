@@ -26,7 +26,7 @@ with st.sidebar:
     selected = option_menu("Multiple default prediction",
                            ["Loan_Prediction"], icons = ["Activity"], default_index=0)
 
-if selected="Loan_Prediction":
+if selected=="Loan_Prediction":
     st.title("Loan_Prediction using credit score")
     col1, col2 = st.columns(2)
     with col1:
