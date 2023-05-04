@@ -20,7 +20,12 @@ def predictfor(input_data):
         return ("Yes, default")
     else:
         return ("No")
-    
+def predictfor(input_data):
+    prediction = loaded_model.predict(input_data)
+    if prediction==1:
+        return ("Yes, default")
+    else:
+        return ("No")
     
 with st.sidebar:
     selected = option_menu("Multiple default prediction",
@@ -33,3 +38,22 @@ if selected=="Loan_Prediction":
         Credit_History = st.text_input("Credit_history")
     with col2:
          Property_Area = st.text_input("Area of the property")
+    
+def main():
+    st.title("Loan Default Prediction")
+    
+#    Credit_History,Property_Area
+    
+    Credit_History = st.text_input("Credit_history")
+    
+    Property_Area = st.text_input("Area of the property")
+    
+    loan_default=""
+    
+    if st.button("Default check button"):
+        loan_default = predictfor([[Credit_History, Property_Area]])
+    st.success(loan_default)
+
+
+if __name__=="__main__":
+    main()
