@@ -44,9 +44,9 @@ def main():
     
 #    Credit_History,Property_Area
     
-    Credit_History = st.text_input("Credit_history")
+#     Credit_History = st.text_input("Credit_history")
     
-    Property_Area = st.text_input("Area of the property")
+#     Property_Area = st.text_input("Area of the property")
     
     loan_default=""
     
